@@ -67,14 +67,29 @@
         text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
       }
 
-      .highlight-box a {
-        color: #3498db;
+      .telegram-button {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 20px;
+        font-size: 0.9em;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #3498db;
+        border: none;
+        border-radius: 8px;
         text-decoration: none;
-        font-weight: 600;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
       }
 
-      .highlight-box a:hover {
-        text-decoration: underline;
+      .telegram-button:hover {
+        background-color: #2980b9;
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+      }
+
+      .telegram-button:active {
+        background-color: #1f639a;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
       }
 
       .footer {
@@ -109,7 +124,8 @@
       <p>Une nouvelle <b>convention furry</b> plongée dans un univers de <b>contes</b> et de <b>légendes</b>, au cœur de Mons, en Belgique. </p>
       <div class="highlight-box">
         <strong>Plus d'informations prochainement...</strong>
-        <br /> Reste informé•e en rejoignant le <a href="https://telegram.anthrotales.eu" target="_blank">groupe Telegram</a> officiel.
+        <br />
+        <a href="https://telegram.anthrotales.eu" target="_blank" class="telegram-button">Rejoindre le groupe Telegram</a>
       </div>
       <div class="footer">
         <a href="mailto:contact@anthrotales.eu">contact@anthrotales.eu</a>
