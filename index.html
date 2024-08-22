@@ -5,17 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AnthroTales</title>
     <meta name="title" content="AnthroTales" />
-    <meta name="description" content="Une nouvelle convention furry plongée dans un univers de contes et de légendes, au cœur de Mons, en Belgique." />
-    <meta name="author" content="AnthroTales">
+    <meta
+      name="description"
+      content="Une nouvelle convention furry plongée dans un univers de contes et de légendes, au cœur de Mons, en Belgique."
+    />
+    <meta name="author" content="AnthroTales" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.anthrotales.eu/" />
     <meta property="og:title" content="AnthroTales" />
-    <meta property="og:description" content="Une nouvelle convention furry plongée dans un univers de contes et de légendes, au cœur de Mons, en Belgique." />
+    <meta
+      property="og:description"
+      content="Une nouvelle convention furry plongée dans un univers de contes et de légendes, au cœur de Mons, en Belgique."
+    />
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://www.anthrotales.eu/" />
     <meta property="twitter:title" content="AnthroTales" />
-    <meta property="twitter:description" content="Une nouvelle convention furry plongée dans un univers de contes et de légendes, au cœur de Mons, en Belgique." />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+    <meta
+      property="twitter:description"
+      content="Une nouvelle convention furry plongée dans un univers de contes et de légendes, au cœur de Mons, en Belgique."
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <style>
       body {
         font-family: "Montserrat", Arial, sans-serif;
@@ -36,7 +53,8 @@
         background: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(10px);
         border-radius: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), inset 0 4px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3),
+          inset 0 4px 8px rgba(0, 0, 0, 0.1);
         padding: 20px;
         max-width: 600px;
         margin: 0 20px;
@@ -61,7 +79,7 @@
         padding: 20px;
         border-radius: 12px;
         background-color: rgba(25, 25, 25, 0.5);
-        color: #FFFFFF;
+        color: #ffffff;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
       }
@@ -114,26 +132,48 @@
         height: 100%;
         z-index: 0;
       }
+
+      .logo {
+        max-width: 200px;
+      }
     </style>
   </head>
   <body>
     <canvas id="starCanvas"></canvas>
     <div class="container">
+      <img src="icon.png" alt="Logo" class="logo" />
       <h1>AnthroTales</h1>
-      <p>Une nouvelle <b>convention furry</b> plongée dans un univers de <b>contes</b> et de <b>légendes</b>, au cœur de Mons, en Belgique. </p>
+      <p>
+        Une nouvelle <b>convention furry</b> plongée dans un univers de
+        <b>contes</b> et de <b>légendes</b>, au cœur de Mons, en Belgique.
+      </p>
       <div class="highlight-box">
-        <strong style="font-size:1.05em;">Plus d'informations prochainement...</strong>
-        <br /> Sois informé•e en premier en rejoignant le groupe Telegram! <br />
-        <a href="https://telegram.anthrotales.eu" target="_blank" class="telegram-button">Rejoindre le groupe Telegram</a>
+        <strong style="font-size: 1.05em"
+          >Plus d'informations prochainement...</strong
+        >
+        <br />
+        Sois informé•e en premier en rejoignant le groupe Telegram! <br />
+        <a
+          href="https://telegram.anthrotales.eu"
+          target="_blank"
+          class="telegram-button"
+          >Rejoindre le groupe Telegram</a
+        >
       </div>
       <div class="footer">
         <a href="mailto:contact@anthrotales.eu">contact@anthrotales.eu</a>
-        <br /> &copy; 2024 <a href="https://kbopub.economie.fgov.be/kbopub/toonondernemingps.html?ondernemingsnummer=1012427107" target="_blank">AnthroTales Events</a>. Tous droits réservés.
+        <br />
+        &copy; 2024
+        <a
+          href="https://kbopub.economie.fgov.be/kbopub/toonondernemingps.html?ondernemingsnummer=1012427107"
+          target="_blank"
+          >AnthroTales Events</a
+        >. Tous droits réservés.
       </div>
     </div>
     <script>
-      const canvas = document.getElementById('starCanvas');
-      const ctx = canvas.getContext('2d');
+      const canvas = document.getElementById("starCanvas");
+      const ctx = canvas.getContext("2d");
       const stars = [];
       const numStars = 100;
 
@@ -157,10 +197,10 @@
 
       function drawStars() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.fillStyle = 'white';
-        ctx.strokeStyle = 'white';
+        ctx.fillStyle = "white";
+        ctx.strokeStyle = "white";
         ctx.lineWidth = 1;
-        stars.forEach(star => {
+        stars.forEach((star) => {
           ctx.beginPath();
           ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
           ctx.fill();
@@ -178,7 +218,7 @@
         drawStars();
         requestAnimationFrame(animate);
       }
-      window.addEventListener('resize', resizeCanvas);
+      window.addEventListener("resize", resizeCanvas);
       resizeCanvas();
       createStars();
       animate();
