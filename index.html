@@ -88,19 +88,24 @@
         text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
       }
 
-      .telegram-button {
+      .telegram-button,
+      .subscribe-button {
         display: inline-block;
         margin-top: 15px;
         padding: 10px 20px;
         font-size: 0.9em;
         font-weight: bold;
         color: #ffffff;
-        background-color: #3498db;
         border: none;
         border-radius: 8px;
         text-decoration: none;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .telegram-button {
+        background-color: #3498db;
+        border: 2px solid #2980b9;
       }
 
       .telegram-button:hover {
@@ -110,6 +115,22 @@
 
       .telegram-button:active {
         background-color: #1f639a;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      .subscribe-button {
+        background-color: #2d2d2d;
+        border: 2px solid #444;
+        margin-left: 10px;
+      }
+
+      .subscribe-button:hover {
+        background-color: #3a3a3a;
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+      }
+
+      .subscribe-button:active {
+        background-color: #1f1f1f;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
       }
 
@@ -156,12 +177,18 @@
           >Plus d'informations prochainement...</strong
         >
         <br />
-        Sois informé•e en premier en rejoignant le groupe Telegram! <br />
+        Sois informé•e en premier en suivant nos réseaux! <br />
         <a
           href="https://telegram.anthrotales.eu"
           target="_blank"
           class="telegram-button"
           >Rejoindre le groupe Telegram</a
+        >
+        <a
+          href="https://x.anthrotales.eu"
+          target="_blank"
+          class="subscribe-button"
+          >S'abonner au compte X</a
         >
       </div>
       <div class="footer">
