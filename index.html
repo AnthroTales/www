@@ -191,7 +191,7 @@
   <body>
     <canvas id="starCanvas"></canvas>
     <div class="container">
-      <button class="language-button" onclick="switchLanguage()">EN</button>
+      <button class="language-button" onclick="switchLanguage()">🇬🇧</button>
       <img src="icon.png" alt="Logo" class="logo" />
       <h1 id="title">AnthroTales</h1>
       <p id="description">
@@ -265,7 +265,7 @@
       function switchLanguage() {
         currentLanguage = currentLanguage === "fr" ? "en" : "fr";
         const button = document.querySelector(".language-button");
-        button.textContent = currentLanguage === "fr" ? "EN" : "FR";
+        button.textContent = currentLanguage === "fr" ? "🇬🇧" : "🇫🇷";
 
         document.getElementById("title").innerHTML = texts[currentLanguage].title;
         document.getElementById("description").innerHTML = texts[currentLanguage].description;
