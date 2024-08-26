@@ -177,7 +177,7 @@
       }
 
       .language-button img {
-        width: 22px;
+        width: 24px;
         height: auto;
       }
 
@@ -289,6 +289,58 @@
         document.getElementById("company").innerHTML = texts[currentLanguage].company;
         document.getElementById("rights").innerHTML = texts[currentLanguage].rights;
       }
+
+      const canvas = document.getElementById("starCanvas");
+      const ctx = canvas.getContext("2d");
+      const stars = [];
+      const numStars = 100;
+
+      function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+
+      function createStars() {
+        stars.length = 0;
+        for (let i = 0; i < numStars; i++) {
+          stars.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            size: Math.random() * 2 + 1,
+            speedX: Math.random() * 0.5 - 0.25,
+            speedY: Math.random() * 0.5 - 0.25,
+          });
+        }
+      }
+
+      function drawStars() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = "white";
+        ctx.strokeStyle = "white";
+        ctx.lineWidth = 1;
+        stars.forEach((star) => {
+          ctx.beginPath();
+          ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.stroke();
+          star.x += star.speedX;
+          star.y += star.speedY;
+          if (star.x < 0) star.x = canvas.width;
+          if (star.x > canvas.width) star.x = 0;
+          if (star.y < 0) star.y = canvas.height;
+          if (star.y > canvas.height) star.y = 0;
+        });
+      }
+
+      function animate() {
+        drawStars();
+        requestAnimationFrame(animate);
+      }
+
+      window.addEventListener("resize", resizeCanvas);
+      resizeCanvas();
+      createStars();
+      animate();
     </script>
   </body>
 </html>
