@@ -176,6 +176,11 @@
         transition: background-color 0.3s ease, box-shadow 0.3s ease;
       }
 
+      .language-button img {
+        width: 24px;
+        height: auto;
+      }
+
       .language-button:hover {
         background-color: #3a3a3a;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
@@ -191,7 +196,9 @@
   <body>
     <canvas id="starCanvas"></canvas>
     <div class="container">
-      <button class="language-button" onclick="switchLanguage()">🇬🇧</button>
+      <button class="language-button" onclick="switchLanguage()">
+        <img src="https://em-content.zobj.net/source/apple/391/flag-united-kingdom_1f1ec-1f1e7.png" alt="Language" id="language-img" />
+      </button>
       <img src="icon.png" alt="Logo" class="logo" />
       <h1 id="title">AnthroTales</h1>
       <p id="description">
@@ -199,9 +206,9 @@
         <b>contes</b> et de <b>légendes</b>, au cœur de Mons, en Belgique.
       </p>
       <div class="highlight-box">
-        <strong id="info" style="font-size: 1.05em"
-          >Plus d'informations prochainement...</strong
-        >
+        <strong id="info" style="font-size: 1.05em">
+          Plus d'informations prochainement...
+        </strong>
         <br />
         <span id="follow">Soyez informé•e en priorité en suivant nos réseaux!</span>
         <br />
@@ -210,15 +217,17 @@
           target="_blank"
           class="telegram-button"
           id="telegram"
-          >Nous rejoindre sur Telegram</a
         >
+          Nous rejoindre sur Telegram
+        </a>
         <a
           href="https://x.anthrotales.eu"
           target="_blank"
           class="subscribe-button"
           id="subscribe"
-          >Nous suivre sur X</a
         >
+          Nous suivre sur X
+        </a>
       </div>
       <div class="footer">
         <a href="mailto:contact@anthrotales.eu" id="contact">contact@anthrotales.eu</a>
@@ -228,16 +237,17 @@
           href="https://kbopub.economie.fgov.be/kbopub/toonondernemingps.html?ondernemingsnummer=1012427107"
           target="_blank"
           id="company"
-          >AnthroTales Events</a
-        >. <span id="rights">Tous droits réservés.</span>
+        >
+          AnthroTales Events
+        </a>
+        . <span id="rights">Tous droits réservés.</span>
       </div>
     </div>
     <script>
       const texts = {
         fr: {
           title: "AnthroTales",
-          description:
-            "Une nouvelle <b>convention furry</b> plongée dans un univers de <b>contes</b> et de <b>légendes</b>, au cœur de Mons, en Belgique.",
+          description: "Une nouvelle <b>convention furry</b> plongée dans un univers de <b>contes</b> et de <b>légendes</b>, au cœur de Mons, en Belgique.",
           info: "Plus d'informations prochainement...",
           follow: "Soyez informé•e en priorité en suivant nos réseaux!",
           telegram: "Nous rejoindre sur Telegram",
@@ -248,8 +258,7 @@
         },
         en: {
           title: "AnthroTales",
-          description:
-            "A new <b>furry convention</b> immersed in a world of <b>tales</b> and <b>legends</b>, in the center of Mons, Belgium.",
+          description: "A new <b>furry convention</b> immersed in a world of <b>tales</b> and <b>legends</b>, in the center of Mons, Belgium.",
           info: "More information coming soon...",
           follow: "Stay informed by following our networks!",
           telegram: "Join us on Telegram",
@@ -264,9 +273,12 @@
 
       function switchLanguage() {
         currentLanguage = currentLanguage === "fr" ? "en" : "fr";
-        const button = document.querySelector(".language-button");
-        button.textContent = currentLanguage === "fr" ? "🇬🇧" : "🇫🇷";
-
+        const imgSrc = currentLanguage === "fr"
+          ? "https://em-content.zobj.net/source/apple/391/flag-united-kingdom_1f1ec-1f1e7.png"
+          : "https://em-content.zobj.net/source/apple/391/flag-france_1f1eb-1f1f7.png";
+        
+        document.getElementById("language-img").src = imgSrc;
+        
         document.getElementById("title").innerHTML = texts[currentLanguage].title;
         document.getElementById("description").innerHTML = texts[currentLanguage].description;
         document.getElementById("info").innerHTML = texts[currentLanguage].info;
@@ -277,58 +289,6 @@
         document.getElementById("company").innerHTML = texts[currentLanguage].company;
         document.getElementById("rights").innerHTML = texts[currentLanguage].rights;
       }
-
-      const canvas = document.getElementById("starCanvas");
-      const ctx = canvas.getContext("2d");
-      const stars = [];
-      const numStars = 100;
-
-      function resizeCanvas() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-      }
-
-      function createStars() {
-        stars.length = 0;
-        for (let i = 0; i < numStars; i++) {
-          stars.push({
-            x: Math.random() * canvas.width,
-            y: Math.random() * canvas.height,
-            size: Math.random() * 2 + 1,
-            speedX: Math.random() * 0.5 - 0.25,
-            speedY: Math.random() * 0.5 - 0.25,
-          });
-        }
-      }
-
-      function drawStars() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.fillStyle = "white";
-        ctx.strokeStyle = "white";
-        ctx.lineWidth = 1;
-        stars.forEach((star) => {
-          ctx.beginPath();
-          ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
-          ctx.fill();
-          ctx.stroke();
-          star.x += star.speedX;
-          star.y += star.speedY;
-          if (star.x < 0) star.x = canvas.width;
-          if (star.x > canvas.width) star.x = 0;
-          if (star.y < 0) star.y = canvas.height;
-          if (star.y > canvas.height) star.y = 0;
-        });
-      }
-
-      function animate() {
-        drawStars();
-        requestAnimationFrame(animate);
-      }
-
-      window.addEventListener("resize", resizeCanvas);
-      resizeCanvas();
-      createStars();
-      animate();
     </script>
   </body>
 </html>
