@@ -79,7 +79,7 @@
       }
 
       .highlight-box {
-        border: 3px solid #3498db;
+        border: 2px solid #ffffff;
         padding: 20px;
         border-radius: 12px;
         background-color: rgba(25, 25, 25, 0.5);
@@ -88,8 +88,31 @@
         text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
       }
 
+      .highlight-telegram {
+        border: 1px dashed #ffffff;
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 12px;
+        background-color: rgba(25, 25, 25, 0.5);
+        color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+      }
+
+      .highlight-x {
+        border: 1px dashed #ffffff;
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 12px;
+        background-color: rgba(25, 25, 25, 0.5);
+        color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+      }
+
       .telegram-button,
-      .subscribe-button {
+      .x-button,
+      .news-button {
         display: inline-block;
         margin-top: 15px;
         padding: 10px 20px;
@@ -106,6 +129,7 @@
       .telegram-button {
         background-color: #3498db;
         border: 2px solid #2980b9;
+        margin-left: 10px;
       }
 
       .telegram-button:hover {
@@ -118,19 +142,34 @@
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
       }
 
-      .subscribe-button {
+      .x-button {
         background-color: #2d2d2d;
         border: 2px solid #444;
         margin-left: 10px;
       }
 
-      .subscribe-button:hover {
+      .x-button:hover {
         background-color: #3a3a3a;
         box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
       }
 
-      .subscribe-button:active {
+      .x-button:active {
         background-color: #1f1f1f;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      .news-button {
+        background-color: #920f0f;
+        border: 2px solid #a00606;
+      }
+
+      .news-button:hover {
+        background-color: #a01111;
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+      }
+
+      .news-button:active {
+        background-color: #af1414;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
       }
 
@@ -187,7 +226,7 @@
       }
 
       @media only screen and (max-width: 620px) {
-        .subscribe-button {
+        .telegram-button {
           margin-left: 0;
         }
       }
@@ -197,7 +236,11 @@
     <canvas id="starCanvas"></canvas>
     <div class="container">
       <button class="language-button" onclick="switchLanguage()">
-        <img src="https://em-content.zobj.net/source/apple/391/flag-united-kingdom_1f1ec-1f1e7.png" alt="Language" id="language-img" />
+        <img
+          src="https://em-content.zobj.net/source/apple/391/flag-united-kingdom_1f1ec-1f1e7.png"
+          alt="Language"
+          id="language-img"
+        />
       </button>
       <img src="icon.png" alt="Logo" class="logo" />
       <h1 id="title">AnthroTales</h1>
@@ -210,34 +253,51 @@
           Plus d'informations prochainement...
         </strong>
         <br />
-        <span id="follow">Soyez informé•e en priorité en suivant nos réseaux!</span>
+        <span id="follow"
+          >Soyez informé•e en priorité en suivant nos réseaux!</span
+        >
         <br />
-        <a
-          href="https://telegram.anthrotales.eu"
-          target="_blank"
-          class="telegram-button"
-          id="telegram"
-        >
-          Nous rejoindre sur Telegram
-        </a>
-        <a
-          href="https://x.anthrotales.eu"
-          target="_blank"
-          class="subscribe-button"
-          id="subscribe"
-        >
-          Nous suivre sur X
-        </a>
+        <div class="highlight-telegram">
+          <strong id="info" style="font-size: 1.05em"> Telegram </strong>
+          <br />
+          <a
+            href="https://news.anthrotales.eu"
+            target="_blank"
+            class="news-button"
+            id="news"
+          >
+            S'abonner aux actualités
+          </a>
+          <a
+            href="https://telegram.anthrotales.eu"
+            target="_blank"
+            class="telegram-button"
+            id="telegram"
+            >Rejoindre le groupe</a
+          >
+        </div>
+        <div class="highlight-x">
+          <strong id="xText" style="font-size: 1.05em">
+            X (anciennement Twitter)
+          </strong>
+          <br />
+          <a
+            href="https://x.anthrotales.eu"
+            target="_blank"
+            class="x-button"
+            id="x"
+          >
+            Suivre le compte
+          </a>
+        </div>
       </div>
       <div class="footer">
-        <a href="mailto:contact@anthrotales.eu" id="contact">contact@anthrotales.eu</a>
+        <a href="mailto:contact@anthrotales.eu" id="contact"
+          >contact@anthrotales.eu</a
+        >
         <br />
         &copy; 2024
-        <a
-          href="https://asbl.anthrotales.eu"
-          target="_blank"
-          id="company"
-        >
+        <a href="https://asbl.anthrotales.eu" target="_blank" id="company">
           AnthroTales Events
         </a>
         . <span id="rights">Tous droits réservés.</span>
@@ -247,22 +307,28 @@
       const texts = {
         fr: {
           title: "AnthroTales",
-          description: "Une nouvelle <b>convention furry</b> plongée dans un univers de <b>contes</b> et de <b>légendes</b>, au cœur de Mons, en Belgique.",
+          description:
+            "Une nouvelle <b>convention furry</b> plongée dans un univers de <b>contes</b> et de <b>légendes</b>, au cœur de Mons, en Belgique.",
           info: "Plus d'informations prochainement...",
           follow: "Soyez informé•e en priorité en suivant nos réseaux!",
-          telegram: "Nous rejoindre sur Telegram",
-          subscribe: "Nous suivre sur X",
+          news: "S'abonner aux actualités",
+          telegram: "Rejoindre le groupe",
+          x: "Suivre le compte",
+          xText: "X (anciennement Twitter)",
           contact: "contact@anthrotales.eu",
           company: "AnthroTales Events",
           rights: "Tous droits réservés.",
         },
         en: {
           title: "AnthroTales",
-          description: "A new <b>furry convention</b> immersed in a world of <b>tales</b> and <b>legends</b>, in the center of Mons, Belgium.",
+          description:
+            "A new <b>furry convention</b> immersed in a world of <b>tales</b> and <b>legends</b>, in the center of Mons, Belgium.",
           info: "More information coming soon...",
           follow: "Stay informed by following our networks!",
-          telegram: "Join us on Telegram",
-          subscribe: "Follow us on X",
+          news: "Subscribe to the news",
+          telegram: "Join the group",
+          x: "Follow the account",
+          xText: "X (formerly Twitter)",
           contact: "contact@anthrotales.eu",
           company: "AnthroTales Events",
           rights: "All rights reserved.",
@@ -273,21 +339,32 @@
 
       function switchLanguage() {
         currentLanguage = currentLanguage === "fr" ? "en" : "fr";
-        const imgSrc = currentLanguage === "fr"
-          ? "https://em-content.zobj.net/source/apple/391/flag-united-kingdom_1f1ec-1f1e7.png"
-          : "https://em-content.zobj.net/source/apple/391/flag-france_1f1eb-1f1f7.png";
-        
+        const imgSrc =
+          currentLanguage === "fr"
+            ? "https://em-content.zobj.net/source/apple/391/flag-united-kingdom_1f1ec-1f1e7.png"
+            : "https://em-content.zobj.net/source/apple/391/flag-france_1f1eb-1f1f7.png";
+
         document.getElementById("language-img").src = imgSrc;
-        
-        document.getElementById("title").innerHTML = texts[currentLanguage].title;
-        document.getElementById("description").innerHTML = texts[currentLanguage].description;
+
+        document.getElementById("title").innerHTML =
+          texts[currentLanguage].title;
+        document.getElementById("description").innerHTML =
+          texts[currentLanguage].description;
         document.getElementById("info").innerHTML = texts[currentLanguage].info;
-        document.getElementById("follow").innerHTML = texts[currentLanguage].follow;
-        document.getElementById("telegram").innerHTML = texts[currentLanguage].telegram;
-        document.getElementById("subscribe").innerHTML = texts[currentLanguage].subscribe;
-        document.getElementById("contact").innerHTML = texts[currentLanguage].contact;
-        document.getElementById("company").innerHTML = texts[currentLanguage].company;
-        document.getElementById("rights").innerHTML = texts[currentLanguage].rights;
+        document.getElementById("follow").innerHTML =
+          texts[currentLanguage].follow;
+        document.getElementById("telegram").innerHTML =
+          texts[currentLanguage].telegram;
+        document.getElementById("xText").innerHTML =
+          texts[currentLanguage].xText;
+        document.getElementById("x").innerHTML = texts[currentLanguage].x;
+        document.getElementById("news").innerHTML = texts[currentLanguage].news;
+        document.getElementById("contact").innerHTML =
+          texts[currentLanguage].contact;
+        document.getElementById("company").innerHTML =
+          texts[currentLanguage].company;
+        document.getElementById("rights").innerHTML =
+          texts[currentLanguage].rights;
       }
 
       const canvas = document.getElementById("starCanvas");
