@@ -81,6 +81,7 @@
       .highlight-box {
         border: 1px solid #3498db;
         padding: 20px;
+        margin-bottom: 10px;
         border-radius: 12px;
         background-color: rgba(25, 25, 25, 0.5);
         color: #ffffff;
@@ -102,12 +103,12 @@
       }
 
       .footer {
-        margin-top: 25px;
+        margin-top: 10px;
         font-size: 0.9em;
         color: #aaa;
       }
 
-      .footer a {
+      a {
         color: #3498db;
         text-decoration: none;
       }
@@ -174,10 +175,13 @@
         <strong id="timer" style="font-size: 1.4em"> 00 : 00 : 00 : 00 </strong>
         <br />
         <br />
-        <span id="follow"
-          >Soyez informé•e en priorité en suivant nos réseaux!</span
+        <i
+          ><a href="images/1.webp" target="_blank" id="text1"
+            >Ô froid, ta cruauté ne nous fait point peur</a
+          ></i
         >
-        <br />
+      </div>
+      <div>
         <a
           href="https://go.anthrotales.eu/news"
           target="_blank"
@@ -249,14 +253,35 @@
             <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
           </svg>
         </a>
+        <a
+          href="mailto:contact@anthrotales.eu"
+          target="_blank"
+          class="network-button"
+          title="Mail"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-mail"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="#ffffff"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"
+            />
+            <path d="M3 7l9 6l9 -6" />
+          </svg>
+        </a>
       </div>
       <div class="footer">
-        <a href="mailto:contact@anthrotales.eu" id="contact"
-          >contact@anthrotales.eu</a
-        >
-        <br />
         &copy; 2024
-        <a href="https://go.anthrotales.eu/bce" target="_blank" id="company">
+        <a href="https://go.anthrotales.eu/bce" target="_blank">
           AnthroTales Events.
         </a>
         <span id="rights">Tous droits réservés.</span>
@@ -265,22 +290,16 @@
     <script>
       const texts = {
         fr: {
-          title: "AnthroTales",
           description:
             "Une nouvelle <b>convention furry</b> plongée dans un univers de <b>contes</b> et de <b>légendes</b>, au cœur de Mons, en Belgique.",
-          follow: "Soyez informé•e en priorité en suivant nos réseaux!",
-          contact: "contact@anthrotales.eu",
-          company: "AnthroTales Events.",
           rights: "Tous droits réservés.",
+          text1: "Ô froid, ta cruauté ne nous fait point peur",
         },
         en: {
-          title: "AnthroTales",
           description:
             "A new <b>furry convention</b> immersed in a world of <b>tales</b> and <b>legends</b>, in the center of Mons, Belgium.",
-          follow: "Stay informed by following our networks!",
-          contact: "contact@anthrotales.eu",
-          company: "AnthroTales Events.",
           rights: "All rights reserved.",
+          text1: "Oh cold, your cruelty won't lead us into terror",
         },
       };
 
@@ -295,18 +314,12 @@
 
         document.getElementById("language-img").src = imgSrc;
 
-        document.getElementById("title").innerHTML =
-          texts[currentLanguage].title;
         document.getElementById("description").innerHTML =
           texts[currentLanguage].description;
-        document.getElementById("follow").innerHTML =
-          texts[currentLanguage].follow;
-        document.getElementById("contact").innerHTML =
-          texts[currentLanguage].contact;
-        document.getElementById("company").innerHTML =
-          texts[currentLanguage].company;
         document.getElementById("rights").innerHTML =
           texts[currentLanguage].rights;
+        document.getElementById("text1").innerHTML =
+          texts[currentLanguage].text1;
       }
 
       const canvas = document.getElementById("starCanvas");
