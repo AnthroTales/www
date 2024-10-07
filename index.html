@@ -79,7 +79,7 @@
       }
 
       .highlight-box {
-        border: 2px solid #ffffff;
+        border: 1px solid #3498db;
         padding: 20px;
         border-radius: 12px;
         background-color: rgba(25, 25, 25, 0.5);
@@ -88,78 +88,17 @@
         text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
       }
 
-      .highlight-telegram,
-      .highlight-x {
-        border: 1px dashed #ffffff;
-        padding: 20px;
-        margin-top: 20px;
-        border-radius: 12px;
-        background-color: rgba(25, 25, 25, 0.5);
-        color: #ffffff;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-      }
-
-      .telegram-button,
-      .x-button,
-      .news-button {
+      .network-button {
         display: inline-block;
-        margin-top: 15px;
-        padding: 10px 20px;
+        margin-top: 5px;
+        padding: 5px 15px;
         font-size: 0.9em;
         font-weight: bold;
         color: #ffffff;
         border: none;
         border-radius: 8px;
         text-decoration: none;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         transition: background-color 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .telegram-button {
-        background-color: #2ecc71; /* Greenish */
-        border: 2px solid #27ae60;
-        margin-left: 10px;
-      }
-
-      .telegram-button:hover {
-        background-color: #27ae60;
-        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
-      }
-
-      .telegram-button:active {
-        background-color: #1f8c4e;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-      }
-
-      .x-button {
-        background-color: #2d2d2d;
-        border: 2px solid #444;
-      }
-
-      .x-button:hover {
-        background-color: #3a3a3a;
-        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
-      }
-
-      .x-button:active {
-        background-color: #1f1f1f;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-      }
-
-      .news-button {
-        background-color: #2980b9; /* Blueish */
-        border: 2px solid #2471a3;
-      }
-
-      .news-button:hover {
-        background-color: #2471a3;
-        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
-      }
-
-      .news-button:active {
-        background-color: #1e6192;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
       }
 
       .footer {
@@ -213,12 +152,6 @@
         background-color: #3a3a3a;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
       }
-
-      @media only screen and (max-width: 620px) {
-        .telegram-button {
-          margin-left: 0;
-        }
-      }
     </style>
   </head>
   <body>
@@ -238,47 +171,84 @@
         <b>contes</b> et de <b>légendes</b>, au cœur de Mons, en Belgique.
       </p>
       <div class="highlight-box">
-        <strong id="info" style="font-size: 1.05em">
-          Plus d'informations prochainement...
-        </strong>
+        <strong id="timer" style="font-size: 1.4em"> 00 : 00 : 00 : 00 </strong>
+        <br />
         <br />
         <span id="follow"
           >Soyez informé•e en priorité en suivant nos réseaux!</span
         >
         <br />
-        <div class="highlight-telegram">
-          <strong id="info" style="font-size: 1.05em"> Telegram </strong>
-          <br />
-          <a
-            href="https://go.anthrotales.eu/news"
-            target="_blank"
-            class="news-button"
-            id="news"
+        <a
+          href="https://go.anthrotales.eu/news"
+          target="_blank"
+          class="network-button"
+          title="News"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-news"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="#ffffff"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
           >
-            S'abonner aux actualités
-          </a>
-          <a
-            href="https://go.anthrotales.eu/telegram"
-            target="_blank"
-            class="telegram-button"
-            id="telegram"
-            >Rejoindre le groupe</a
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M16 6h3a1 1 0 0 1 1 1v11a2 2 0 0 1 -4 0v-13a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1v12a3 3 0 0 0 3 3h11"
+            />
+            <path d="M8 8l4 0" />
+            <path d="M8 12l4 0" />
+            <path d="M8 16l4 0" />
+          </svg>
+        </a>
+        <a
+          href="https://go.anthrotales.eu/telegram"
+          target="_blank"
+          class="network-button"
+          title="Telegram"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-brand-telegram"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="#ffffff"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
           >
-        </div>
-        <div class="highlight-x">
-          <strong id="xText" style="font-size: 1.05em">
-            X (anciennement Twitter)
-          </strong>
-          <br />
-          <a
-            href="https://go.anthrotales.eu/x"
-            target="_blank"
-            class="x-button"
-            id="x"
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
+          </svg>
+        </a>
+        <a
+          href="https://go.anthrotales.eu/x"
+          target="_blank"
+          class="network-button"
+          title="X / Twitter"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-brand-x"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="#ffffff"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
           >
-            Suivre le compte
-          </a>
-        </div>
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+            <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+          </svg>
+        </a>
       </div>
       <div class="footer">
         <a href="mailto:contact@anthrotales.eu" id="contact"
@@ -289,7 +259,7 @@
         <a href="https://go.anthrotales.eu/bce" target="_blank" id="company">
           AnthroTales Events.
         </a>
-         <span id="rights">Tous droits réservés.</span>
+        <span id="rights">Tous droits réservés.</span>
       </div>
     </div>
     <script>
@@ -298,12 +268,7 @@
           title: "AnthroTales",
           description:
             "Une nouvelle <b>convention furry</b> plongée dans un univers de <b>contes</b> et de <b>légendes</b>, au cœur de Mons, en Belgique.",
-          info: "Plus d'informations prochainement...",
           follow: "Soyez informé•e en priorité en suivant nos réseaux!",
-          news: "S'abonner aux actualités",
-          telegram: "Rejoindre le groupe",
-          x: "Suivre le compte",
-          xText: "X (anciennement Twitter)",
           contact: "contact@anthrotales.eu",
           company: "AnthroTales Events.",
           rights: "Tous droits réservés.",
@@ -312,12 +277,7 @@
           title: "AnthroTales",
           description:
             "A new <b>furry convention</b> immersed in a world of <b>tales</b> and <b>legends</b>, in the center of Mons, Belgium.",
-          info: "More information coming soon...",
           follow: "Stay informed by following our networks!",
-          news: "Subscribe to the news",
-          telegram: "Join the group",
-          x: "Follow the account",
-          xText: "X (formerly Twitter)",
           contact: "contact@anthrotales.eu",
           company: "AnthroTales Events.",
           rights: "All rights reserved.",
@@ -339,15 +299,8 @@
           texts[currentLanguage].title;
         document.getElementById("description").innerHTML =
           texts[currentLanguage].description;
-        document.getElementById("info").innerHTML = texts[currentLanguage].info;
         document.getElementById("follow").innerHTML =
           texts[currentLanguage].follow;
-        document.getElementById("telegram").innerHTML =
-          texts[currentLanguage].telegram;
-        document.getElementById("xText").innerHTML =
-          texts[currentLanguage].xText;
-        document.getElementById("x").innerHTML = texts[currentLanguage].x;
-        document.getElementById("news").innerHTML = texts[currentLanguage].news;
         document.getElementById("contact").innerHTML =
           texts[currentLanguage].contact;
         document.getElementById("company").innerHTML =
@@ -407,6 +360,37 @@
       resizeCanvas();
       createStars();
       animate();
+
+      const targetDate = new Date("2024-10-21T18:00:00+02:00");
+
+      function updateTimer() {
+        const now = new Date();
+        const difference = targetDate - now;
+
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor(
+          (difference % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        const formattedTime = `${String(days).padStart(2, "0")} : ${String(
+          hours
+        ).padStart(2, "0")} : ${String(minutes).padStart(2, "0")} : ${String(
+          seconds
+        ).padStart(2, "0")}`;
+
+        document.getElementById("timer").innerHTML = formattedTime;
+
+        if (difference < 0) {
+          document.getElementById("timer").innerHTML = "00 : 00 : 00 : 00";
+        }
+      }
+
+      setInterval(updateTimer, 1000);
+      window.onload = updateTimer;
     </script>
   </body>
 </html>
