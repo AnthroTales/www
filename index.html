@@ -153,6 +153,22 @@
         background-color: #3a3a3a;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
       }
+
+      #timer {
+        font-size: 2em;
+        font-family: monospace;
+        font-weight: bold;
+        color: #3498db;
+        padding: 5px;
+        border-radius: 8px;
+        background-color: rgba(52, 152, 219, 0.05);
+        transition: background-color 0.3s ease;
+        white-space: nowrap;
+      }
+
+      #timer:hover {
+        background-color: rgba(52, 152, 219, 0.1);
+      }
     </style>
   </head>
   <body>
@@ -172,7 +188,7 @@
         <b>contes</b> et de <b>légendes</b>, au cœur de Mons, en Belgique.
       </p>
       <div class="highlight-box">
-        <strong id="timer" style="font-size: 1.4em"> 00 : 00 : 00 : 00 </strong>
+        <strong id="timer"> 00 : 00 : 00 : 00 </strong>
         <br />
         <br />
         <i>
