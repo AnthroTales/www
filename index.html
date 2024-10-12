@@ -192,6 +192,14 @@
           >
           »</i
         >
+        <br />
+        <i>
+          «
+          <a href="images/2.webp" target="_blank" id="text2"
+            >Sous l'égide bienveillante de nos gardiens et créateurs</a
+          >
+          »</i
+        >
       </div>
       <div>
         <a
@@ -356,12 +364,14 @@
             "Une nouvelle <b>convention furry</b> plongée dans un univers de <b>contes</b> et de <b>légendes</b>, au cœur de Mons, en Belgique.",
           rights: "Tous droits réservés.",
           text1: "Ô froid, ta cruauté ne nous fait point peur",
+          text2: "Sous l'égide bienveillante de nos gardiens et créateurs",
         },
         en: {
           description:
             "A new <b>furry convention</b> immersed in a world of <b>tales</b> and <b>legends</b>, in the center of Mons, Belgium.",
           rights: "All rights reserved.",
           text1: "Oh cold, your cruelty won't lead us into terror",
+          text2: "Under the watchful gaze of our guardians and creators",
         },
       };
 
@@ -382,6 +392,8 @@
           texts[currentLanguage].rights;
         document.getElementById("text1").innerHTML =
           texts[currentLanguage].text1;
+        document.getElementById("text2").innerHTML =
+          texts[currentLanguage].text2;
       }
 
       const canvas = document.getElementById("starCanvas");
