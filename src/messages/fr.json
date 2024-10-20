@@ -1,0 +1,15 @@
+{
+  "HomePage": {
+    "editionName": "VOLUME I : LA SYMPHONIE DU SOLSTICE",
+    "localization": "Mons, <br/> Belgique",
+    "conventionDate": "Du 30 avril <br/> au 3 mai 2026",
+    "registrationDate": "4e trimestre <br/> 2025",
+    "homeText": "Une <italic>nouvelle convention furry</italic> plongée dans un univers de contes et de légendes !",
+    "backgroundBy": "Fond d'écran par",
+    "rightsReserved": "Tous droits réservés"
+  },
+  "LocaleSwitcher": {
+    "label": "changer de langue",
+    "locale": "{locale, select, fr {Français} en {English} other {Unknown}}"
+  }
+}

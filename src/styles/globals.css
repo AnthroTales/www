@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer {
+  @tailwind base;
+}
+
+@font-face {
+    font-family: 'CustomFont';
+    src: url("../../public/fonts/EnchantedTales.otf") format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.anthro-font {
+    font-family: 'CustomFont', sans-serif; /* Apply the custom font globally */
+}
