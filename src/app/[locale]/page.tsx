@@ -13,12 +13,10 @@ import {
   IconBrandBluesky,
 } from "@tabler/icons-react";
 import { Footer } from "@/components/Footer";
-import { useTranslations } from "next-intl";
 import { Header } from "@/components/Header";
 import Image from "next/image";
 
 export default function Page() {
-  const t = useTranslations("HomePage");
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -38,14 +36,10 @@ export default function Page() {
             width={400}
           />
           <h2 className="w-full lg:text-4xl text-3xl text-center">
-            {t("editionName")}
+            1
           </h2>
           <p className="lg:text-2xl lg:pb-2 pb-10 text-lg text-center lg:w-4/6 p-2 md:w-2/3">
-            {t.rich("homeText", {
-              italic: (children) => (
-                <i className={"text-green-300"}>{children}</i>
-              ),
-            })}
+            2
           </p>
           <div className="grid gap-5 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 p-5">
             {/* Card 1 */}
@@ -56,7 +50,7 @@ export default function Page() {
               <p
                 className="text-white text-xl font-bold"
                 dangerouslySetInnerHTML={{
-                  __html: t("localization", { br: "<br />" }),
+                  __html: 3,
                 }}
               />
             </div>
@@ -67,7 +61,7 @@ export default function Page() {
               <p
                 className="text-white text-xl font-bold"
                 dangerouslySetInnerHTML={{
-                  __html: t("conventionDate", { br: "<br />" }),
+                  __html: 4,
                 }}
               />
             </div>
@@ -78,7 +72,7 @@ export default function Page() {
               <p
                 className="text-white text-xl font-bold"
                 dangerouslySetInnerHTML={{
-                  __html: t("registrationDate", { br: "<br />" }),
+                  __html: 5,
                 }}
               />
             </div>
