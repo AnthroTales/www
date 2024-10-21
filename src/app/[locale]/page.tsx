@@ -17,6 +17,8 @@ import { useTranslations } from "next-intl";
 import { Header } from "@/components/Header";
 import Image from "next/image";
 
+export function generateStaticParams() {}
+
 export default function Page() {
   const t = useTranslations("HomePage");
   return (
