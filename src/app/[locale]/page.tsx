@@ -32,7 +32,7 @@ export default function Page() {
             }}
           />
         </div>
-        <div className="flex flex-col justify-center items-center text-white gap-y-3 pt-16 mx-2">
+        <div className="flex flex-col justify-center items-center text-white gap-y-3 lg:pt-0 mx-2">
           <Image
             src="/images/TextLogo.png"
             alt="AnthroTales"
@@ -40,7 +40,7 @@ export default function Page() {
             width={500}
             className={"px-4 object-contain object-bottom"}
           />
-          <b><h2 className="w-full lg:text-4xl text-3xl text-center my-6">
+          <b><h2 className="w-full lg:text-4xl text-3xl text-center my-16 lg:my-3">
             {t("editionName")}
           </h2></b>
           <p className="lg:text-2xl lg:pb-2 pb-3 text-lg text-center lg:w-4/6 p-2 md:w-2/3">
@@ -137,7 +137,7 @@ export default function Page() {
               <IconMail className="h-10 w-10" />
             </a>
             </div>
-            <b>#ATT1</b>
+            <p>{t("ourNetworks")} <b>#ATT1</b></p>
           </div>
         </div>
       </main>
