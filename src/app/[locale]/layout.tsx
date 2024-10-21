@@ -5,6 +5,7 @@ import { MantineProvider, ColorSchemeScript } from "@mantine/core";
 import theme from "@/theme";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
+import Image from "next/image";
 
 type Props = {
   children: React.ReactNode;
@@ -54,13 +55,18 @@ export default async function RootLayout({
         />
         <link rel="icon" href="favicon.ico" />
       </head>
-      <body
-        className="min-h-screen flex flex-col bg-black bg-opacity-70 bg-center bg-no-repeat bg-cover"
-        style={{ backgroundImage: "url('/images/homeBackground.jpeg')" }}
-      >
-        <NextIntlClientProvider messages={messages}>
-          <MantineProvider theme={theme}>{children}</MantineProvider>
-        </NextIntlClientProvider>
+      <body className="min-h-screen flex flex-col bg-black bg-opacity-70 bg-center bg-no-repeat bg-cover">
+      <Image
+          src="/images/homeBackground.jpeg"
+          alt="Background"
+          fill
+          quality={100}
+          style={{ objectFit: "cover" }}
+          className="z-[-1]"
+      />
+      <NextIntlClientProvider messages={messages}>
+        <MantineProvider theme={theme}>{children}</MantineProvider>
+      </NextIntlClientProvider>
       </body>
     </html>
   );
