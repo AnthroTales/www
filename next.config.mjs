@@ -6,7 +6,8 @@ const nextConfig = {
   swcMinify: true,
   experimental: {
     optimizePackageImports: ["@mantine/core", "@mantine/hooks"],
-  }
+  },
+    distDir: "build",
 };
 
 export default withNextIntl(nextConfig);
