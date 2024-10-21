@@ -32,7 +32,7 @@ export default function Page() {
             }}
           />
         </div>
-        <div className="flex flex-col justify-center items-center text-white gap-y-3 lg:pt-0 mx-2">
+        <div className="flex flex-col justify-center items-center text-white gap-y-3 lg:pt-12 mx-2">
           <Image
             src="/images/TextLogo.png"
             alt="AnthroTales"
@@ -40,7 +40,7 @@ export default function Page() {
             width={500}
             className={"px-4 object-contain object-bottom"}
           />
-          <b><h2 className="w-full lg:text-4xl text-3xl text-center my-16 lg:my-3">
+          <b><h2 className="w-full lg:text-4xl text-3xl text-center my-16 lg:my-0">
             {t("editionName")}
           </h2></b>
           <p className="lg:text-2xl lg:pb-2 pb-3 text-lg text-center lg:w-4/6 p-2 md:w-2/3">
@@ -50,7 +50,7 @@ export default function Page() {
               ),
             })}
           </p>
-          <div className="grid gap-5 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 p-3">
+          <div className="grid gap-5 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 p-1">
             {/* Card 1 */}
             <div className="border-4 border-white border-dashed rounded-lg p-6 px-24 flex flex-col items-center text-center bg">
               <div className="text-white mb-4">
