@@ -1,11 +1,12 @@
 {
   "HomePage": {
-    "editionName": "VOLUME I : THE SOLSTICE SYMPHONY",
+    "editionName": "VOLUME I: THE SOLSTICE SYMPHONY",
     "localization": "Mons, <br/> Belgium",
     "conventionDate": "April 30th <br/> to May 3rd, 2026",
     "registrationDate": "4th Quarter <br/> 2025",
-    "homeText": "A <italic>new furry convention</italic> immersed in a world of tales and legends !",
+    "homeText": "A <italic>new furry convention</italic> immersed in a world of tales and legends.",
     "backgroundBy": "Background by",
+    "siteConstruction": "Site under construction.",
     "rightsReserved": "All rights reserved"
   },
   "LocaleSwitcher": {

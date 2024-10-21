@@ -22,7 +22,7 @@ export default async function RootLayout({
       <head>
         <ColorSchemeScript />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>AnthroTales</title>
+        <title>AnthroTales 1 | La Symphonie du Solstice</title>
         <meta name="title" content="AnthroTales 1 | La Symphonie du Solstice" />
         <meta
           name="description"

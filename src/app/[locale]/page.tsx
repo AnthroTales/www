@@ -7,7 +7,7 @@ import {
   IconTicket,
   IconNews,
   IconBrandTelegram,
-  IconBrandTwitter,
+  IconBrandX,
   IconBrandInstagram,
   IconMail,
   IconBrandBluesky,
@@ -22,7 +22,7 @@ export default function Page() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-grow flex flex-col items-center pt-5">
+      <main className="flex-grow flex flex-col items-center">
         <Snowfall
           style={{
             position: "fixed",
@@ -30,24 +30,25 @@ export default function Page() {
             height: "100vh",
           }}
         />
-        <div className="flex flex-col justify-center items-center text-white gap-y-3 pt-5">
+        <div className="flex flex-col justify-center items-center text-white gap-y-3 pt-16">
           <Image
             src="/images/TextLogo.png"
             alt="AnthroTales"
-            height={400}
-            width={400}
+            height={500}
+            width={500}
+            className={"px-4"}
           />
           <h2 className="w-full lg:text-4xl text-3xl text-center">
             {t("editionName")}
           </h2>
-          <p className="lg:text-2xl lg:pb-2 pb-10 text-lg text-center lg:w-4/6 p-2 md:w-2/3">
+          <p className="lg:text-2xl lg:pb-2 pb-3 text-lg text-center lg:w-4/6 p-2 md:w-2/3">
             {t.rich("homeText", {
               italic: (children) => (
                 <i className={"text-green-300"}>{children}</i>
               ),
             })}
           </p>
-          <div className="grid gap-5 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 p-5">
+          <div className="grid gap-5 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 p-3">
             {/* Card 1 */}
             <div className="border-4 border-white border-dashed rounded-lg p-6 flex flex-col items-center text-center bg">
               <div className="text-white mb-4">
@@ -106,7 +107,7 @@ export default function Page() {
               href="https://go.anthrotales.eu/x"
               target="_blank"
             >
-              <IconBrandTwitter className="h-10 w-10" />
+              <IconBrandX className="h-10 w-10" />
             </a>
             <a
               className="flex items-center space-x-2 p-2 bg-transparent text-white rounded"
