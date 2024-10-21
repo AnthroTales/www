@@ -5,7 +5,7 @@ import {
   IconCalendarMonth,
   IconMapPin,
   IconTicket,
-  IconNews,
+  IconSpeakerphone,
   IconBrandTelegram,
   IconBrandX,
   IconBrandInstagram,
@@ -92,7 +92,7 @@ export default function Page() {
               href="https://go.anthrotales.eu/news"
               target="_blank"
             >
-              <IconNews className="h-10 w-10" />
+              <IconSpeakerphone className="h-10 w-10" />
             </a>
             <a
               className="flex items-center space-x-2 p-2 bg-transparent text-white rounded"
