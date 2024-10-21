@@ -56,7 +56,7 @@ export default async function RootLayout({
       </head>
       <body
         className="min-h-screen flex flex-col bg-black bg-opacity-70 bg-center bg-no-repeat bg-cover"
-        style={{ backgroundImage: "url('/images/homeBackground.png')" }}
+        style={{ backgroundImage: "url('/images/homeBackground.jpeg')" }}
       >
         <NextIntlClientProvider messages={messages}>
           <MantineProvider theme={theme}>{children}</MantineProvider>
