@@ -11,7 +11,7 @@ const nextConfig = {
 };
 
 try {
-  export default withNextIntl(nextConfig);
+  module.exports = withNextIntl(nextConfig);
 } catch (err) {
   if (!(err instanceof Error)) {
     console.warn('Non-Error instance caught:', err);
