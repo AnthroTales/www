@@ -6,7 +6,7 @@ export const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white py-2">
       <div className="px-4 flex justify-between items-center">
-        <p>🚧 {t("siteConstruction")}</p>
+        <p>{t("siteConstruction")}</p>
         <div className="lg:text-right text-center">
           &copy; {new Date().getFullYear()}{" "}
           <a href="https://go.anthrotales.eu/bce" target="_blank">AnthroTales Events.{" "}</a>

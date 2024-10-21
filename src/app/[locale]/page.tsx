@@ -44,7 +44,7 @@ export default function Page() {
           <p className="lg:text-2xl lg:pb-2 pb-3 text-lg text-center lg:w-4/6 p-2 md:w-2/3">
             {t.rich("homeText", {
               italic: (children) => (
-                <i className={"text-blue-300"}>{children}</i>
+                <i className={"text-green-300"}>{children}</i>
               ),
             })}
           </p>
