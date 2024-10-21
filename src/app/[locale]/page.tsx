@@ -38,19 +38,19 @@ export default function Page() {
             width={500}
             className={"px-4"}
           />
-          <h2 className="w-full lg:text-4xl text-3xl text-center">
+          <b><h2 className="w-full lg:text-4xl text-3xl text-center">
             {t("editionName")}
-          </h2>
+          </h2></b>
           <p className="lg:text-2xl lg:pb-2 pb-3 text-lg text-center lg:w-4/6 p-2 md:w-2/3">
             {t.rich("homeText", {
               italic: (children) => (
-                <i className={"text-green-300"}>{children}</i>
+                <i className={"text-blue-300"}>{children}</i>
               ),
             })}
           </p>
           <div className="grid gap-5 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 p-3">
             {/* Card 1 */}
-            <div className="border-4 border-white border-dashed rounded-lg p-6 flex flex-col items-center text-center bg">
+            <div className="border-4 border-white border-dashed rounded-lg p-6 px-24 flex flex-col items-center text-center bg">
               <div className="text-white mb-4">
                 <IconMapPin className="h-12 w-12" />
               </div>
@@ -84,7 +84,8 @@ export default function Page() {
               />
             </div>
           </div>
-          <div id="social-media-buttons" className="flex justify-around mt-2">
+          <div className="rounded-lg p-2 items-center text-center bg mb-3">
+            <div className={"flex"}>
             <a
               className="flex items-center space-x-2 p-2 bg-transparent text-white rounded"
               title="Telegram News"
@@ -133,6 +134,8 @@ export default function Page() {
             >
               <IconMail className="h-10 w-10" />
             </a>
+            </div>
+            <b>#ATT1</b>
           </div>
         </div>
       </main>
