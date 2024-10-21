@@ -22,14 +22,16 @@ export default function Page() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-grow flex flex-col items-center">
-        <Snowfall
-          style={{
-            position: "fixed",
-            width: "100vw",
-            height: "100vh",
-          }}
-        />
+      <main className="flex-grow flex flex-col items-center relative z-20">
+        <div className={"relative z-30"}>
+          <Snowfall
+            style={{
+              position: "fixed",
+              width: "100vw",
+              height: "100vh",
+            }}
+          />
+        </div>
         <div className="flex flex-col justify-center items-center text-white gap-y-3 pt-16 mx-2">
           <Image
             src="/images/TextLogo.png"

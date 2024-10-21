@@ -4,7 +4,7 @@ export const Footer = () => {
   const t = useTranslations("HomePage");
 
   return (
-    <footer className="bg-gray-800 text-white py-2">
+    <footer className="bg-gray-800 text-white py-2 relative z-20">
       <div className="px-4 flex justify-between items-center">
         <p>{t("siteConstruction")}</p>
         <div className="lg:text-right text-center">
