@@ -30,7 +30,7 @@ export default function Page() {
             height: "100vh",
           }}
         />
-        <div className="flex flex-col justify-center items-center text-white gap-y-3 pt-16 mx-3">
+        <div className="flex flex-col justify-center items-center text-white gap-y-3 pt-16 mx-2">
           <Image
             src="/images/TextLogo.png"
             alt="AnthroTales"
