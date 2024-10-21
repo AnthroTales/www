@@ -36,7 +36,7 @@ export default function Page() {
             alt="AnthroTales"
             height={500}
             width={500}
-            className={"px-4"}
+            className={"px-4 object-contain object-bottom"}
           />
           <b><h2 className="w-full lg:text-4xl text-3xl text-center">
             {t("editionName")}
