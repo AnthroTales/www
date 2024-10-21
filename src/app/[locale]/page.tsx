@@ -30,7 +30,7 @@ export default function Page() {
             height: "100vh",
           }}
         />
-        <div className="flex flex-col justify-center items-center text-white gap-y-3 pt-16">
+        <div className="flex flex-col justify-center items-center text-white gap-y-3 pt-16 mx-3">
           <Image
             src="/images/TextLogo.png"
             alt="AnthroTales"
@@ -38,13 +38,13 @@ export default function Page() {
             width={500}
             className={"px-4 object-contain object-bottom"}
           />
-          <b><h2 className="w-full lg:text-4xl text-3xl text-center">
+          <b><h2 className="w-full lg:text-4xl text-3xl text-center my-6">
             {t("editionName")}
           </h2></b>
           <p className="lg:text-2xl lg:pb-2 pb-3 text-lg text-center lg:w-4/6 p-2 md:w-2/3">
             {t.rich("homeText", {
               italic: (children) => (
-                <i className={"text-green-300"}>{children}</i>
+                <i className={"text-blue-300"}>{children}</i>
               ),
             })}
           </p>
