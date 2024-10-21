@@ -10,7 +10,7 @@
     "rightsReserved": "Tous droits réservés"
   },
   "LocaleSwitcher": {
-    "label": "changer de langue",
+    "label": "View in English",
     "locale": "{locale, select, fr {Français / French} en {Anglais / English} other {Unknown}}"
   }
 }
